@@ -6,7 +6,7 @@
 /*   By: escura <escura@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:09:06 by escura            #+#    #+#             */
-/*   Updated: 2024/05/04 15:33:01 by escura           ###   ########.fr       */
+/*   Updated: 2024/05/04 16:46:27 by escura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_allocs	*ft_lstlast(t_allocs *lst)
 
 void	create_alloc(t_allocs **lst, t_allocs *nnew)
 {
-	if(DEBUG)
+	if (DEBUG)
 		printf("Creating new alloc %p\n", nnew->ptr);
 	if (!lst || !nnew)
 		return ;

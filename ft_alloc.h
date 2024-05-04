@@ -6,20 +6,19 @@
 /*   By: escura <escura@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:06:08 by escura            #+#    #+#             */
-/*   Updated: 2024/05/04 15:28:22 by escura           ###   ########.fr       */
+/*   Updated: 2024/05/04 16:47:25 by escura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ALLOC_H
-# define ALLOC_H
-#endif
+#ifndef FT_ALLOC_H
+# define FT_ALLOC_H
 
-#ifndef DEBUG
-# define DEBUG 0
-#endif
+# ifndef DEBUG
+#  define DEBUG 0
+# endif
 
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 typedef struct t_allocs
 {
@@ -41,3 +40,5 @@ int					ft_allocsize(void);
 /* destructors */
 void				ft_free(void *ptr);
 void				ft_destructor(void);
+
+#endif

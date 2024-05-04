@@ -6,11 +6,17 @@
 /*   By: escura <escura@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:06:43 by escura            #+#    #+#             */
-/*   Updated: 2024/05/04 15:30:56 by escura           ###   ########.fr       */
+/*   Updated: 2024/05/04 16:46:13 by escura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_alloc.h"
+
+/*
+
+NOT NORMINETTED (Just for examples)
+
+*/
 
 int	main(void)
 {
