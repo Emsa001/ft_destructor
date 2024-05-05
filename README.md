@@ -1,7 +1,7 @@
 
 # FT_DESTRUCTOR
 
-A lightweight C library that automates memory cleanup. By calling ft_destructor() at program exit or any allocation fail, it ensures all allocated memory is properly freed, simplifying memory management and minimizing memory leaks.
+A lightweight C library that automates memory cleanup, it ensures all allocated memory is properly freed in case of allocation fail or at program exit, simplifying memory management and minimizing memory leaks.
 
 
 ## Installation
