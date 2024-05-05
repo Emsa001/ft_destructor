@@ -67,15 +67,18 @@ int	main(void)
 	int i = 0;
 	while (i < 10)
 	{
-		char *str4 = ft_malloc(455 * sizeof(char)); // allocation without ft_free
+		// allocation without ft_free
+		char *str4 = ft_malloc(455 * sizeof(char));
 		(void)str4;
 		i++;
 	}
 
-	char *str5 = malloc(455 * sizeof(char)); // original malloc - won't be freed with destructor
+	// original malloc - won't be freed with destructor
+	char *str5 = malloc(455 * sizeof(char)); 
 	(void)str5;
 
-	ft_destructor(); // will free everything that was allocated with ft_malloc or ft_calloc
+	// will free everything that was allocated with ft_malloc or ft_calloc
+	ft_destructor(); 
 	return (0);
 }
 ```
