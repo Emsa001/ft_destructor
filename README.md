@@ -1,7 +1,7 @@
 
 # FT_DESTRUCTOR
 
-A lightweight C library that automates memory cleanup. By calling ft_destructor() at program exit, it ensures all allocated memory is properly freed, simplifying memory management and minimizing memory leaks.
+A lightweight C library that automates memory cleanup. By calling ft_destructor() at program exit or any allocation fail, it ensures all allocated memory is properly freed, simplifying memory management and minimizing memory leaks.
 
 
 ## Installation
@@ -54,7 +54,7 @@ int	main(void)
 
 	ft_allocs(lst);
 
-    // Allocating with ft_malloc
+    // allocations with ft_malloc
 	char *str = ft_malloc(455 * sizeof(char));
 	char *str2 = ft_malloc(455 * sizeof(char));
 	char *str3 = ft_malloc(455 * sizeof(char));
@@ -67,15 +67,15 @@ int	main(void)
 	int i = 0;
 	while (i < 10)
 	{
-		char *str4 = ft_malloc(455 * sizeof(char)); //never freeing memory
+		char *str4 = ft_malloc(455 * sizeof(char)); // allocation without ft_free
 		(void)str4;
 		i++;
 	}
 
-	char *str5 = malloc(455 * sizeof(char)); // original malloc - will be leak
+	char *str5 = malloc(455 * sizeof(char)); // original malloc - won't be freed with destructor
 	(void)str5;
 
-	ft_destructor(); // will free everything that was allocated with ft_malloc
+	ft_destructor(); // will free everything that was allocated with ft_malloc or ft_calloc
 	return (0);
 }
 ```
