@@ -47,19 +47,19 @@ Insert gif or link to demo
 
 int	main(void)
 {
-    // init list for allocations
+	// init list for allocations
 	t_allocs *lst = ft_calloc(1, sizeof(t_allocs));
 	if (lst == NULL)
 		return (1);
 
 	ft_allocs(lst);
 
-    // allocations with ft_malloc
+	// allocations with ft_malloc
 	char *str = ft_malloc(455 * sizeof(char));
 	char *str2 = ft_malloc(455 * sizeof(char));
 	char *str3 = ft_malloc(455 * sizeof(char));
 
-    // manual free
+	// manual free
 	ft_free(str);  
 	ft_free(str2);
 	ft_free(str3);
