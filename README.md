@@ -25,17 +25,17 @@ cc main.c ft_alloc.a -o my_program
 
 - Init / Get the list with all allocations
 ```c
-t_allocs	*ft_allocs(t_allocs *lst);
+t_allocs *ft_allocs(t_allocs *lst);
 ````
 - Allocations
 ```c
-void  *ft_malloc(size_t size);
-void  *ft_calloc(size_t count, size_t size)
+void *ft_malloc(size_t size);
+void *ft_calloc(size_t count, size_t size)
 ```
 - Destructors
 ```c
-void	ft_free(void *ptr);
-void	ft_destructor(void);
+void ft_free(void *ptr);
+void ft_destructor(void);
 ```
 
 ## Demo
