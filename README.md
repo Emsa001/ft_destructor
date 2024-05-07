@@ -40,9 +40,6 @@ void ft_destructor(void);
 ```
 
 ## Demo
-
-Insert gif or link to demo
-
 ```c
 #include "ft_alloc.h"
 
