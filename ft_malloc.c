@@ -6,7 +6,7 @@
 /*   By: escura <escura@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:08:30 by escura            #+#    #+#             */
-/*   Updated: 2024/05/04 15:28:14 by escura           ###   ########.fr       */
+/*   Updated: 2024/05/08 15:20:45 by escura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	*ft_malloc(size_t size)
 	ptr = malloc(size);
 	if (ptr == NULL)
 	{
-		printf("Memory allocation failed for %p\n", ptr);
+		printf("Memory allocation failed\n");
 		ft_destructor();
 		exit(EXIT_FAILURE);
 	}
-	create_alloc(&allocs, add_alloc(ptr));
+	add_allocnode(&allocs, create_alloc(ptr));
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: escura <escura@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:06:08 by escura            #+#    #+#             */
-/*   Updated: 2024/05/04 16:47:25 by escura           ###   ########.fr       */
+/*   Updated: 2024/05/08 15:20:22 by escura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_ALLOC_H
 
 # ifndef DEBUG
-#  define DEBUG 0
+#  define DEBUG 1
 # endif
 
 # include <stdio.h>
@@ -33,8 +33,8 @@ void				*ft_malloc(size_t size);
 /* utils */
 t_allocs			*ft_allocs(t_allocs *lst);
 
-void				create_alloc(t_allocs **lst, t_allocs *nnew);
-t_allocs			*add_alloc(void *ptr);
+void				add_allocnode(t_allocs **lst, t_allocs *nnew);
+t_allocs			*create_alloc(void *ptr);
 int					ft_allocsize(void);
 
 /* destructors */
