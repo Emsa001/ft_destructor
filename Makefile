@@ -23,18 +23,6 @@ all: $(OUT)
 $(OUT): $(OBJS)
 	ar rcs $(OUT) $(OBJS)
 
-ft_destructors.o: ft_destructors.c
-	$(CC) $(FLAGS) ft_destructors.c -std=c99
-
-ft_malloc.o: ft_malloc.c
-	$(CC) $(FLAGS) ft_malloc.c -std=c99
-
-ft_utils.o: ft_utils.c
-	$(CC) $(FLAGS) ft_utils.c -std=c99
-
-ft_calloc.o: ft_calloc.c
-	$(CC) $(FLAGS) ft_calloc.c -std=c99
-
 clean:
 	rm -f $(OBJS)
 

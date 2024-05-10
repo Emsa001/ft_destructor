@@ -37,7 +37,7 @@ int	main(void)
 	}
 
 	// original malloc - won't be freed with destructor
-	char *str5 = ft_malloc(455 * sizeof(char)); 
+	char *str5 = malloc(455 * sizeof(char)); 
 	(void)str5;
 
 	// will free everything that was allocated with ft_malloc or ft_calloc
