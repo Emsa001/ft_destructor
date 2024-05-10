@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-OBJS	= ft_destructors.o ft_malloc.o ft_calloc.o ft_utils.o
-SOURCE	= ft_destructors.c ft_malloc.c ft_calloc.c ft_utils.c
+OBJS	= ft_destructors.o ft_allocs.o ft_utils.o ft_init.o
+SOURCE	= ft_destructors.c ft_allocs.c ft_utils.c ft_init.c
 HEADER	= ft_alloc.h
 OUT	= ft_alloc.a
 CC	 = gcc

@@ -14,17 +14,21 @@
 # define FT_ALLOC_H
 
 # ifndef DEBUG
-#  define DEBUG 1
+#  define DEBUG 0
 # endif
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdbool.h>
 
 typedef struct t_allocs
 {
 	void			*ptr;
 	struct t_allocs	*next;
 }					t_allocs;
+
+/* init */
+bool				ft_alloc_init(void);
 
 /* allocations */
 void				*ft_calloc(size_t count, size_t size);

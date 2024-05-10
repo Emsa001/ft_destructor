@@ -46,11 +46,7 @@ void ft_destructor(void);
 int	main(void)
 {
 	// init list for allocations
-	t_allocs *lst = ft_calloc(1, sizeof(t_allocs));
-	if (lst == NULL)
-		return (1);
-
-	ft_allocs(lst);
+	ft_alloc_init();
 
 	// allocations with ft_malloc
 	char *str = ft_malloc(455 * sizeof(char));

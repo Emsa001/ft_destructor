@@ -12,21 +12,13 @@
 
 #include "ft_alloc.h"
 
-void	*ft_malloc(size_t size)
+bool	ft_alloc_init(void)
 {
-	t_allocs	*allocs;
-	void		*ptr;
+	t_allocs	*lst;
 
-	allocs = ft_allocs(NULL);
-	if (allocs == NULL)
-		return (malloc(size));
-	ptr = malloc(size);
-	if (ptr == NULL)
-	{
-		printf("Memory allocation failed\n");
-		ft_destructor();
-		exit(EXIT_FAILURE);
-	}
-	add_allocnode(&allocs, create_alloc(ptr));
-	return (ptr);
+	lst = ft_calloc(1, sizeof(t_allocs));
+	if (lst == NULL)
+		return (false);
+	ft_allocs(lst);
+	return (true);
 }
