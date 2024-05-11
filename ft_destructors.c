@@ -17,6 +17,8 @@ void	ft_free(void *ptr)
 	t_allocs	*lst;
 	t_allocs	*tmp;
 
+	if(ptr == NULL)
+		return ;
 	lst = ft_allocs(NULL);
 	tmp = NULL;
 	while (lst != NULL)
