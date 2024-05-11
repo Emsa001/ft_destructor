@@ -26,11 +26,12 @@ void	ft_free(void *ptr)
 			tmp->next = lst->next;
 			free(lst->ptr);
 			free(lst);
-			break ;
+			return ;
 		}
 		tmp = lst;
 		lst = lst->next;
 	}
+	free(ptr);
 }
 
 void	ft_destructor(void)
