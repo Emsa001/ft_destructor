@@ -6,7 +6,7 @@
 /*   By: escura <escura@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:12:49 by escura            #+#    #+#             */
-/*   Updated: 2024/05/07 19:10:57 by escura           ###   ########.fr       */
+/*   Updated: 2024/05/25 16:42:48 by escura           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	ft_free(void *ptr)
 		tmp = lst;
 		lst = lst->next;
 	}
-	free(ptr);
 }
 
 void	ft_destructor(void)
