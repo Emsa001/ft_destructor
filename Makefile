@@ -15,7 +15,7 @@ SOURCE	= ft_destructors.c ft_allocs.c ft_utils.c ft_init.c
 HEADER	= ft_alloc.h
 OUT	= ft_alloc.a
 CC	 = gcc
-FLAGS	 = -g -Wall -Wextra -Werror -DDEBUG=1
+FLAGS	 = -g -Wall -Wextra -Werror -DDEBUG=0
 
 all: $(OUT)
 
