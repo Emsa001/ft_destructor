@@ -15,22 +15,27 @@ SOURCE	= ft_destructors.c ft_allocs.c ft_utils.c ft_init.c
 HEADER	= ft_alloc.h
 OUT	= ft_alloc.a
 CC	 = gcc
-FLAGS	 = -g -c -Wall -Wextra -Werror
-LFLAGS	 = 
+FLAGS	 = -g -Wall -Wextra -Werror -DDEBUG=1
 
 all: $(OUT)
+
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(OUT): $(OBJS)
 	ar rcs $(OUT) $(OBJS)
 
 executable: all
-	$(CC) main.c ft_alloc.a -o ft_alloc
+	$(CC) $(FLAGS) main.c ft_alloc.a -o ft_alloc
+	make clean
 
 clean:
 	rm -f $(OBJS)
+	rm -rf ft_alloc.dSYM
 
 fclean: clean
 	rm -f $(OUT)
+	rm -f ft_alloc
 
 re: fclean all
 
