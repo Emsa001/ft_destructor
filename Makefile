@@ -23,6 +23,9 @@ all: $(OUT)
 $(OUT): $(OBJS)
 	ar rcs $(OUT) $(OBJS)
 
+executable: all
+	$(CC) main.c ft_alloc.a -o ft_alloc
+
 clean:
 	rm -f $(OBJS)
 
@@ -31,4 +34,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all executable clean fclean re
